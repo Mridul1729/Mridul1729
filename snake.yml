@@ -1,0 +1,44 @@
+name: Generate contribution-snake animation
+
+# run daily, allow manual runs, and run on pushes to main
+on:
+  schedule:
+    - cron: '0 0 * * *'      # daily at 00:00 UTC (change if you want)
+  workflow_dispatch:         # allows "Run workflow" button in Actions
+  push:
+    branches:
+      - main
+
+# allow the workflow to write files back to the repository (necessary to push images)
+permissions:
+  contents: write
+
+jobs:
+  generate-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Generate snake animation (svg + gif)
+        uses: Platane/snk@v3
+        with:
+          # your GitHub username (defaults to repo owner)
+          github_user_name: ${{ github.repository_owner }}
+          # list of generated files and options (one per line)
+          outputs: |
+            dist/github-contribution-grid-snake.svg
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark
+            dist/github-contribution-grid-snake.gif?color_snake=lime&color_dots=#0d0d0d,#1bff7b,#11c04b,#0f8b33,#0a691f
+
+      - name: Push generated files to "output" branch
+        uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          commit_message: "chore: update contribution-snake"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
