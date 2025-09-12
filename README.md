@@ -72,6 +72,17 @@ Here are some ideas to get you started:
 
 ## 🐍 Snake Eating Contributions  
 ![snake gif](https://github.com/Mridul1729/Mridul1729/blob/output/github-contribution-grid-snake.gif)  
+<!-- dark/light aware snake (SVG preferred) -->
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mridul1729/Mridul1729/output/github-contribution-grid-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mridul1729/Mridul1729/output/github-contribution-grid-snake.svg" />
+  <img alt="github-snake" src="https://raw.githubusercontent.com/Mridul1729/Mridul1729/output/github-contribution-grid-snake.svg" />
+</picture>
+
+<!-- OR use animated GIF (if you prefer animation over svg) -->
+<p align="center">
+  <img alt="snake animation" src="https://raw.githubusercontent.com/Mridul1729/Mridul1729/output/github-contribution-grid-snake.gif" />
+</p>
 
 ---
 
