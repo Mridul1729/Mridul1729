@@ -78,11 +78,6 @@ Here are some ideas to get you started:
   <img alt="github-snake" src="https://raw.githubusercontent.com/Mridul1729/Mridul1729/output/github-contribution-grid-snake.svg" />
 </picture>
 
-<!-- OR use animated GIF (if you prefer animation over svg) -->
-<p align="center">
-  <img alt="snake animation" src="https://raw.githubusercontent.com/Mridul1729/Mridul1729/output/github-contribution-grid-snake.gif" />
-</p>
-
 ---
 
 ## 🌐 Connect With Me  
